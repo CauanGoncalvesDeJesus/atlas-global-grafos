@@ -1,0 +1,33 @@
+body { margin: 0; display: flex; font-family: 'Segoe UI', sans-serif; height: 100vh; background: #1a1a1a; color: white; }
+        #sidebar { width: 350px; padding: 20px; background: #252526; border-right: 1px solid #333; z-index: 1000; overflow-y: auto; }
+        #map { flex-grow: 1; height: 100%; }
+        
+        /* Títulos de Seção */
+        .section-title { 
+            text-transform: uppercase; 
+            font-size: 0.75em; 
+            letter-spacing: 1px; 
+            color: #007acc; 
+            margin: 20px 0 10px 0;
+            border-bottom: 1px solid #333;
+            padding-bottom: 5px;
+        }
+
+        .control-group { margin-bottom: 20px; }
+        label { display: block; margin-bottom: 8px; font-size: 0.9em; color: #aaa; }
+        select, button { width: 100%; padding: 10px; border-radius: 4px; border: none; margin-bottom: 10px; }
+        select { background: #3c3c3c; color: white; }
+        button { background: #007acc; color: white; cursor: pointer; font-weight: bold; transition: 0.3s; }
+        button:hover { background: #005a9e; }
+
+        /* Painel de Resultados */
+        .results-panel {
+            margin-top: 25px;
+            padding: 15px;
+            background: #1e1e1e;
+            border-radius: 8px;
+            border: 1px solid #333;
+        }
+        .result-item { display: flex; justify-content: space-between; margin-bottom: 10px; font-size: 0.9em; }
+        .result-value { color: #65eb3c; font-weight: bold; }
+        .status-box { background: #333; padding: 15px; border-radius: 4px; font-size: 0.85em; border-left: 4px solid #007acc; }
