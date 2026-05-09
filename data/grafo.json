@@ -1,0 +1,48 @@
+{
+  "vertices": [
+    {
+      "id": "bombeiros_centro",
+      "nome": "Corpo de Bombeiros (Centro)",
+      "lat": -23.5218,
+      "lng": -46.1853
+    },
+    {
+      "id": "upa_mogilar",
+      "nome": "UPA Mogilar",
+      "lat": -23.5153,
+      "lng": -46.1824
+    },
+    {
+      "id": "chamado_01",
+      "nome": "Ocorrência: Ricardo Vilela",
+      "lat": -23.5235,
+      "lng": -46.1910
+    },
+    {
+      "id": "desastre_encosta",
+      "nome": "Serra do Itapety",
+      "lat": -23.4950,
+      "lng": -46.1750
+    }
+  ],
+  "arestas": [
+    {
+      "origem": "bombeiros_centro",
+      "destino": "chamado_01",
+      "peso": 5.2,
+      "tipo": "tempo_minutos"
+    },
+    {
+      "origem": "upa_mogilar",
+      "destino": "chamado_01",
+      "peso": 4.8,
+      "tipo": "tempo_minutos"
+    },
+    {
+      "origem": "chamado_01",
+      "destino": "desastre_encosta",
+      "peso": 15.5,
+      "tipo": "tempo_minutos"
+    }
+  ]
+}
