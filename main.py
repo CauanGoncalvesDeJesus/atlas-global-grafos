@@ -3,24 +3,24 @@ from flask import Flask, render_template, jsonify
 from src.algorithms.dijkstra import calcular_dijkstra
 from src.algorithms.bfs import calcular_bfs
 
-app = Flask(name)
-
+app = Flask(__name__)
 
 def carregar_dados():
     try:
         with open('data/grafo.json', 'r', encoding='utf-8') as f:
             dados = json.load(f)
-
+            
         grafo_processado = {v['id']: v for v in dados['vertices']}
-
+        
         adjacencias = {v['id']: {} for v in dados['vertices']}
         for a in dados['arestas']:
             adjacencias[a['origem']][a['destino']] = a['peso']
-
+            
         return grafo_processado, adjacencias
     except Exception as e:
         print(f"Erro ao carregar grafo.json: {e}")
         return {}, {}
+
 
 DADOS_NOS, GRAFO_ADJACENCIA = carregar_dados()
 
@@ -52,5 +52,5 @@ def get_sar_route(method, support, call, disaster):
     except Exception as e:
         return jsonify({"error": f"Falha no motor ATLAS: {str(e)}"}), 500
 
-if name == 'main':
+if __name__ == '__main__':
     app.run(debug=True)
